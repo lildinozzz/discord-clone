@@ -8,7 +8,7 @@ export async function DELETE(
 ) {
   try {
     const profile = await currentProfile();
-    const { memberId } = await params;
+    const { memberId } = params;
     const { searchParams } = new URL(req.url);
 
     const serverId = searchParams.get("serverId");
@@ -65,7 +65,7 @@ export async function PATCH(
 ) {
   try {
     const profile = await currentProfile();
-    const { memberId } = await params;
+    const { memberId } = params;
     const { searchParams } = new URL(req.url);
     const { role } = await req.json();
 

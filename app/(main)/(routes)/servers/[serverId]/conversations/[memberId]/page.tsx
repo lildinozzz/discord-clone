@@ -20,7 +20,7 @@ interface IMemberIdProps {
 
 const MemberId = async ({ params, searchParams }: IMemberIdProps) => {
   const profile = await currentProfile();
-  const { memberId, serverId } = await params;
+  const { memberId, serverId } = params;
   const { video } = await searchParams;
 
   if (!profile) {

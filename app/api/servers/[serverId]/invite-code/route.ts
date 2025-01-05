@@ -8,7 +8,7 @@ export async function PATCH(
   { params }: { params: { serverId: string } }
 ) {
   try {
-    const { serverId } = await params;
+    const { serverId } = params;
     const profile = await currentProfile();
 
     if (!profile) {

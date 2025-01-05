@@ -9,7 +9,7 @@ export async function DELETE(
 ) {
   try {
     const profile = await currentProfile();
-    const { channelId } = await params;
+    const { channelId } = params;
     const { searchParams } = new URL(req.url);
 
     const serverId = searchParams.get("serverId");
@@ -64,7 +64,7 @@ export async function PATCH(
   try {
     const profile = await currentProfile();
     const { name, type } = await req.json();
-    const { channelId } = await params;
+    const { channelId } = params;
     const { searchParams } = new URL(req.url);
 
     const serverId = searchParams.get("serverId");

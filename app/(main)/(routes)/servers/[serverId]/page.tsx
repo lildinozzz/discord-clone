@@ -10,7 +10,7 @@ interface IServerIdPageProps {
 
 const ServerIdPage = async ({ params }: IServerIdPageProps) => {
   const profile = await currentProfile();
-  const { serverId } = await params;
+  const { serverId } = params;
 
   if (!profile) {
     redirect("/sign-in");

@@ -17,7 +17,7 @@ const ROLE_ICON_MAP = {
   ADMIN: <ShieldAlert className="w-4 h-4 text-rose-500" />,
 };
 
-export const ServerMember = ({ member, server }: IServerMemberProps) => {
+export const ServerMember = ({ member }: IServerMemberProps) => {
   const params = useParams();
   const router = useRouter();
 
