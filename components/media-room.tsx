@@ -51,7 +51,8 @@ export const MediaRoom = ({ chatId, video, audio }: TMediaRoomProps) => {
 
   return (
     <LiveKitRoom
-      data-lk-theme="default"
+      className="h-ful"
+      data-lk-theme="light-theme"
       serverUrl={process.env.NEXT_PUBLIC_LIVEKIT_URL}
       token={token}
       connect={true}

@@ -73,4 +73,13 @@ body,
   }
 }
 
+.lk-button-group,
+.lk-control-bar,
+.lk-participant-metadata,
+.lk-participant-placeholder,
+.lk-button,
+.lk-toast-connection-state {
+  display: none;
+}
+
 @uploadthing /react/styles.css;
