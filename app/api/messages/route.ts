@@ -14,7 +14,7 @@ export async function GET(req: Request) {
     const channelId = searchParams.get("channelId");
 
     if (!profile) {
-      return new NextResponse("Unathorized", { status: 401 });
+      return new NextResponse("Unauthorized", { status: 401 });
     }
 
     if (!channelId) {
@@ -69,7 +69,10 @@ export async function GET(req: Request) {
       nextCursor = messages[MESSAGES_BATCH - 1].id;
     }
 
-    return NextResponse.json({ items: messages, cursor: nextCursor });
+    return NextResponse.json({
+      items: messages,
+      nextCursor,
+    });
   } catch (error) {
     console.error("[MESSAGES_GET]", error);
     return new NextResponse("Internal Error", { status: 500 });

@@ -18,7 +18,7 @@ export default async function handler(
     const { serverId, channelId } = req.query;
 
     if (!profile) {
-      return res.status(401).json({ error: "Unathorized" });
+      return res.status(401).json({ error: "Unauthorized" });
     }
 
     if (!serverId) {

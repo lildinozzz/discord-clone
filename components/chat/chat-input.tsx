@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 
 import qs, { StringifiableRecord } from "query-string";
 import * as z from "zod";
-import { Plus } from "lucide-react";
+import { Plus, Send } from "lucide-react";
 
 import { Form, FormControl, FormField, FormItem } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
@@ -82,12 +82,22 @@ export const ChatInput = ({ apiUrl, query, name, type }: IChatInputProps) => {
                     }`}
                     {...field}
                   />
-                  <div className="absolute top-7 right-8">
+                  <div className="absolute top-7 right-[5rem]">
                     <EmojiPricker
                       onChange={(emoji: string) =>
                         field.onChange(`${field.value} ${emoji}`)
                       }
                     />
+                  </div>
+                  <div className="absolute top-7 right-[3.5rem]">
+                    <button
+                      disabled={isLoading}
+                      type="submit"
+                      className="absolute h-[24px] w-[24px] bg-zinc-500
+                             dark:bg-zinc-400 hover:bg-zinc-600 dark:hover:bg-zinc-300 transition rounded-full p-1 flex items-center justify-center"
+                    >
+                      <Send className="text-white dark:text-[#313338]" />
+                    </button>
                   </div>
                 </div>
               </FormControl>

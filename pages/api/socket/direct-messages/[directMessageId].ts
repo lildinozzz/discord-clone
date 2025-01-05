@@ -18,7 +18,7 @@ export default async function handler(
     const { content } = req.body;
 
     if (!profile) {
-      return res.status(401).json({ message: "Unathorized" });
+      return res.status(401).json({ message: "Unauthorized" });
     }
 
     if (!conversationId) {
@@ -80,7 +80,7 @@ export default async function handler(
     const canModify = isMessageOwner || isAdmin || isModerator;
 
     if (!canModify) {
-      return res.status(401).json({ message: "Unathorized" });
+      return res.status(401).json({ message: "Unauthorized" });
     }
 
     if (req.method === "DELETE") {

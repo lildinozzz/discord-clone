@@ -7,7 +7,7 @@ const handleAuth = () => {
   const userId = auth();
 
   if (!userId) {
-    throw new Error("Unathorized");
+    throw new Error("Unauthorized");
   }
 
   return { userId: userId };

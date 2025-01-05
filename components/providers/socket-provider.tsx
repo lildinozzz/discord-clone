@@ -1,7 +1,7 @@
 "use client";
 
 import { createContext, useContext, useEffect, useState } from "react";
-import { io as ClientIO, Socket } from "socket.io-client"; // Импортируем тип Socket
+import { io as ClientIO, Socket } from "socket.io-client";
 
 type TSocketConnection = {
   socket: Socket | null;

@@ -11,7 +11,7 @@ export async function DELETE(
     const { serverId } = await params;
 
     if (!profile) {
-      return new NextResponse("Unathorized", { status: 401 });
+      return new NextResponse("Unauthorized", { status: 401 });
     }
 
     if (!serverId) {
@@ -42,7 +42,7 @@ export async function PATCH(
     const { serverId } = await params;
 
     if (!profile) {
-      return new NextResponse("Unathorized", { status: 401 });
+      return new NextResponse("Unauthorized", { status: 401 });
     }
 
     if (!serverId) {
